@@ -4,10 +4,21 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 const Card = ({ title }) => {
+  // inside useState(this indicates default value of variable)
+  // each card manages its own hasLiked state for itself
+  const [hasLiked, setHasLiked] = useState(false);
   return (
     <>
       <div className="card">
         <h2>{title}</h2>
+        <button
+          onClick={() => {
+            // toggled like state
+            setHasLiked(!hasLiked);
+          }}
+        >
+          {hasLiked ? "❤️" : "🤍"}
+        </button>
       </div>
     </>
   );
