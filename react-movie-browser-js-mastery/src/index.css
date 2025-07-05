@@ -36,8 +36,8 @@
   }
 
   main {
-    @apply min-h-screen relative bg-primary;
-    /* @apply bg-hero-pattern bg-cover bg-center; */
+    @apply bg-hero-pattern bg-cover bg-center min-h-screen relative;
+    /* @apply min-h-screen relative bg-primary; */
   }
 
   header {
@@ -96,7 +96,6 @@
 
   .all-movies {
     @apply space-y-9;
-    /* @apply max-w-full px-5; */
 
     & ul {
       @apply grid grid-cols-1 gap-5 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
